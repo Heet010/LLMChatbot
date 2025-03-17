@@ -29,8 +29,8 @@ merged_data = merged_data.dropna(subset=['Type'])
 X = merged_data.drop(columns=['ID', 'Type'])  
 y = merged_data['Type']
 
-# Split the data into training and testing sets (70% training, 30% testing)
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+# Split the data into training and testing sets (80% training, 20% testing)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 # Initialize and train the Random Forest classifier
 rf_model = RandomForestClassifier(n_estimators=100, random_state=42)
