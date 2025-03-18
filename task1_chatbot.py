@@ -1,6 +1,7 @@
 import re
 import pandas as pd
 from langchain_ollama import OllamaLLM
+from nltk.corpus import stopwords
 
 parts_csv = "Parts_with_similarities.csv"  
 df = pd.read_csv(parts_csv)
@@ -29,7 +30,11 @@ def chatbot():
             print("Goodbye!")
             break
         if "similar parts" in user_input.lower():
-            part_query = re.sub(r"[|/,()]", "", user_input.replace("find similar parts", "").strip()).lower()
+            part_query = re.sub(r"[|/,()]", "", user_input.replace("similar parts", "").strip()).lower()
+            part_query = " ".join([word for word in part_query.split() if word not in stopwords.words('english')])  # Remove common words
+            common_words = {"please", "find", "search", "show", "tell", "give", "me"}  
+            part_query = " ".join([word for word in part_query.split() if word not in common_words])
+            print(part_query)
             find_similar_parts(part_query)
         else:
             print("\nBot: ", end="", flush=True)
