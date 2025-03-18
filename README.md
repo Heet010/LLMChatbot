@@ -1,8 +1,7 @@
 # Task 1: Local Chatbot with LLM Inference Using Ollama
 
 ## Overview
-This project implements a local chatbot system using LLM inference on a personal laptop (CPU).  
-It integrates Ollama LLM (Llama 3) for chatbot responses and provides a feature to find similar parts based on a description. To search similar parts please use **"similar parts"** key word in prompt and add partial or full desctription of the part. The system is designed to be used entirely locally, without relying on cloud-based services.
+This project implements a local chatbot system using LLM inference on a personal laptop (CPU). It integrates Ollama LLM (Llama 3) for chatbot responses and provides a feature to find similar parts based on a description. To search similar parts please use **"similar parts"** key word in prompt and add partial or full desctription of the part. The system is designed to be used entirely locally, without relying on cloud-based services.
 
 ## Features
 - Uses **Ollama LLM (Llama 3)** for chatbot responses.
@@ -12,7 +11,7 @@ It integrates Ollama LLM (Llama 3) for chatbot responses and provides a feature 
 ## Setup Instructions
 
 ### Prerequisites
-- **Python 3.x** installed  
+- **Python 3.12** installed  
 - Install required dependencies:
   ```sh
   pip install pandas langchain_ollama
