@@ -34,7 +34,7 @@ def chatbot():
             part_query = " ".join([word for word in part_query.split() if word not in stopwords.words('english')])  # Remove common words
             common_words = {"please", "find", "search", "show", "tell", "give", "me"}  
             part_query = " ".join([word for word in part_query.split() if word not in common_words])
-            print(part_query)
+            # print(part_query)
             find_similar_parts(part_query)
         else:
             print("\nBot: ", end="", flush=True)
