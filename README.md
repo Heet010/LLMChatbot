@@ -1,4 +1,4 @@
-# Task 1: Local Chatbot with LLM Inference Using Ollama
+# Local Chatbot with LLM Inference Using Ollama
 
 ## Overview
 This project implements a local chatbot system using LLM inference on a personal laptop (CPU). It integrates Ollama LLM (Llama 3) for chatbot responses and provides a feature to find similar parts based on a description. To search similar parts please use **"similar parts"** key word in prompt and add partial or full desctription of the part. The system is designed to be used entirely locally, without relying on cloud-based services.
@@ -16,61 +16,7 @@ This project implements a local chatbot system using LLM inference on a personal
   ```sh
   pip install pandas langchain_ollama
 
-# Task 2: Binary Classification using random forest classifier
-
-## Overview
-This task implements a **Random Forest Classifier** to predict a binary classification label (`Type`: **y = 1, n = 0**). The dataset is created by merging two tables (`table_1.csv` and `table_2.csv`) based on a common ID column.  
-
-## Dataset Overview
-
-- Two tables (`table_1.csv`, `table_2.csv`) containing various features.
-- Merged on the `ID` column to form a unified dataset.
-- Categorical columns were label-encoded, converting string values into numerical form.
-- **Missing values were handled**:
-  - **Numerical columns:** Filled with the **mean** of the column.
-  - **Categorical columns:** Filled with the **most frequent value (mode)**.
-- **Binary target column (`Type`)**:
-  - `'y'` was encoded as `1`
-  - `'n'` was encoded as `0`
-- **Final dataset was split** into:
-  - **80% training data**
-  - **20% test data**
-
-## Model and Methodology
-
-### 1. Data Preprocessing
-- **Missing values handled** using **mean/mode imputation**.
-- **Label encoding applied** to categorical features.
-- **Removed any rows with NaN in the `Type` column**.
-
-### 2. Model Training
-- **Random Forest Classifier** with:
-  - `n_estimators=100` (100 decision trees)
-  - `random_state=42` (for reproducibility)
-- **Training set:** 80% of the data.
-
-### 3. Evaluation Metrics
-The model was evaluated on the **test set (20%)** using:
-- **Accuracy**
-- **Precision**
-- **Recall**
-- **F1-score**
-- **Classification Report**
-- **Confusion Matrix**
-
----
-
-## Results
-
-| Metric       | Score |
-|--------------|--------|
-| **Accuracy**  | 99.22% |
-| **Precision** | 99.16% |
-| **Recall**    | 100%   |
-| **F1-Score**  | 99.58% |
-
-
-# Task 3: Finding Similar Fictitious Parts Based on Description
+# Finding Similar Fictitious Parts Based on Description
 
 ## Overview
 This project aims to identify 5 alternative parts for each fictitious part in the dataset based on description similarity. The dataset, `Parts.csv`, contains 998 rows and 32 columns, including *electrical technical details with part descriptions and ID. The approach focuses on text-based similarity matching to recommend the most relevant alternative parts.
